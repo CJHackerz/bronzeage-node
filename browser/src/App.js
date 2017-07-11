@@ -1,21 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './Header'
+import { MinerBox, StatsBox, TilesBox, RPCBox } from './boxes'
+import './App.css'
 
-class App extends Component {
+class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+    return <div className="App container">
+      <Header />
+
+      <div className="row">
+        <div className="col">
+          <MinerBox />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div className="col">
+          <StatsBox />
+        </div>
       </div>
-    );
+
+      <br />
+
+      <div className="row">
+        <div className="col">
+          <TilesBox />
+        </div>
+
+        <div className="col">
+          <RPCBox />
+        </div>
+      </div>
+    </div>
   }
 }
 
-export default App;
+export default App
