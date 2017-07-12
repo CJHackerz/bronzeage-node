@@ -9,7 +9,7 @@ console.log('Starting Decentraland server!')
 console.log('Remember that it supports the same flags as the node (via ENV or argv)\n')
 
 var CONFIG = config({ config: true, arg: true, env: true }).data
-var PORT = CONFIG.serverport || 8080
+var PORT = CONFIG.serverport || 5000
 
 var server = new HTTPBase({ cors: true })
 
